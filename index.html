@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+
+  <form action='https://itunes.apple.com/app/id1543128095' method='GET' id='ios'>
+    <input type="hidden" name="mt" value="8">
+  </form>
+  <form action='https://play.google.com/store/apps/details' method='GET' id='android'>
+    <input type="hidden" name="id" value="com.jissenrinri.membertoolapp">
+  </form>  
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+if((navigator.userAgent.toLowerCase().indexOf("iphone") > -1) || (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) || (navigator.userAgent.toLowerCase().indexOf("ipad") > -1)) {
+  $("#ios").submit();
+
+} else if ((navigator.userAgent.toLowerCase().indexOf("android") > -1)) {
+  $("#android").submit();
+
+} else {
+  $("#ios").submit();
+}
+});
+</script>
+</body>
+</html>
